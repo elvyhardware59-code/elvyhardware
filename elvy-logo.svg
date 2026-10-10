@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" width="100%" height="100%">
+  <defs>
+    <!-- Vibrant Golden Pin Gradient -->
+    <linearGradient id="pinBodyGrad" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#fdb827" />
+      <stop offset="45%" stop-color="#f5a317" />
+      <stop offset="100%" stop-color="#e28c06" />
+    </linearGradient>
+
+    <!-- 3D Bevel Dark Amber Shadow on Left Edge -->
+    <linearGradient id="pinBevelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b4710b" />
+      <stop offset="60%" stop-color="#995c06" />
+      <stop offset="100%" stop-color="#7c4902" />
+    </linearGradient>
+
+    <!-- Floor Drop Shadow Filter -->
+    <filter id="floorShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+    </filter>
+  </defs>
+
+  <!-- 1. Soft Ground Shadow -->
+  <ellipse cx="140" cy="208" rx="46" ry="6" fill="#000000" opacity="0.25" filter="url(#floorShadow)" />
+
+  <!-- 2. Location Pin - 3D Left Bevel Layer -->
+  <path d="M 140 204
+           C 105 170 68 132 68 92
+           C 68 52 100 22 140 22
+           C 180 22 212 52 212 92
+           C 212 132 175 170 140 204 Z"
+        fill="url(#pinBevelGrad)" />
+
+  <!-- 3. Location Pin - Main Front Golden Face -->
+  <path d="M 141 204
+           C 112 170 78 132 78 92
+           C 78 56 106 25 143 23
+           C 180 23 212 52 212 92
+           C 212 132 175 170 141 204 Z"
+        fill="url(#pinBodyGrad)" />
+
+  <!-- 4. Inner Stylized 'e' with White Contour & Swoosh Flourish -->
+  <!-- White Halo Contour -->
+  <path d="M 136 84
+           H 104
+           C 104 68 116 57 132 57
+           C 148 57 159 67 160 80
+           C 160 82 158 84 154 84
+           H 104
+           C 105 102 118 114 136 114
+           C 147 114 157 107 162 98
+           M 160 80
+           C 178 64 210 52 250 56
+           C 290 60 320 74 330 80
+           C 334 83 331 87 325 87
+           C 295 87 262 90 225 100
+           C 192 109 168 107 154 98"
+        fill="none"
+        stroke="#ffffff"
+        stroke-width="12"
+        stroke-linecap="round"
+        stroke-linejoin="round" />
+
+  <!-- Charcoal/Black Inner Stroke & Flourish -->
+  <path d="M 136 84
+           H 104
+           C 104 68 116 57 132 57
+           C 148 57 159 67 160 80
+           C 160 82 158 84 154 84
+           H 104
+           C 105 102 118 114 136 114
+           C 147 114 157 107 162 98"
+        fill="none"
+        stroke="#222429"
+        stroke-width="7"
+        stroke-linecap="round"
+        stroke-linejoin="round" />
+
+  <!-- Fluid Calligraphic Swoosh Wave -->
+  <path d="M 160 80
+           C 182 64 215 54 252 58
+           C 288 62 316 73 325 78
+           C 328 80 326 83 320 83
+           C 292 83 260 86 226 96
+           C 196 104 172 102 160 95
+           Z"
+        fill="#222429" />
+
+  <!-- 5. Wordmark 'elvy' in Authentic Rounded Monoline Geometry -->
+  <g fill="none" stroke="#222429" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Letter 'e' -->
+    <path d="M 235 125
+             C 235 107 220 94 202 94
+             C 183 94 168 108 168 128
+             C 168 147 183 161 203 161
+             C 218 161 228 153 234 143
+             M 169 125
+             H 234" />
+
+    <!-- Letter 'l' (tall rounded stem with smooth bottom foot) -->
+    <path d="M 252 68
+             V 147
+             C 252 156 258 161 268 161" />
+
+    <!-- Letter 'v' (clean rounded angles) -->
+    <path d="M 285 96
+             L 305 156
+             C 307 161 312 161 314 156
+             L 334 96" />
+
+    <!-- Letter 'y' (matching angles with vertical descender) -->
+    <path d="M 348 96
+             L 368 156
+             C 370 160 373 160 375 156
+             L 395 96
+             M 371 148
+             V 186
+             C 371 193 367 197 360 197" />
+  </g>
+
+  <!-- Registered Trademark 'R' -->
+  <text x="404" y="98" fill="#222429" font-family="'Outfit', system-ui, sans-serif" font-size="14" font-weight="700">R</text>
+
+  <!-- 6. Tagline: 'redefining hardware collection' -->
+  <text x="180" y="196"
+        fill="#222429"
+        font-family="'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif"
+        font-size="14.5"
+        font-weight="500"
+        letter-spacing="1.1">redefining hardware collection</text>
+</svg>
